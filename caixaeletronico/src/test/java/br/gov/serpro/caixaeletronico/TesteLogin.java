@@ -8,7 +8,7 @@ public class TesteLogin {
 
 	@Test
 	public void realizarLoginComSucesso() {
-		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardware());
+		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginComSucesso());
 		assertEquals("Usuário Autenticado", caixaEletronico.logar());
 	}
 }
