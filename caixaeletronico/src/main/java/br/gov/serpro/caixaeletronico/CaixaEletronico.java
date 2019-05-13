@@ -15,4 +15,8 @@ public class CaixaEletronico {
 		}
 	}
 
+	public String saldo() {
+		return null;
+	}
+
 }

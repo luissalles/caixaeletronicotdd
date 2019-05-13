@@ -17,4 +17,10 @@ public class TesteLogin {
 		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginInvalido());
 		caixaEletronico.logar();
 	}
+	
+	@Test
+	public void realizarSaque100Reais() {
+		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginInvalido());
+		assertEquals("O saldo é R$100,00", caixaEletronico.saldo());
+	}
 }
