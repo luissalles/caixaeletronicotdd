@@ -12,9 +12,9 @@ public class TesteLogin {
 		assertEquals("Usuário Autenticado", caixaEletronico.logar());
 	}
 
-	@Test
+	@Test(expected=ContaNaoEncontradaException.class)
 	public void loginInválido() {
 		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginInvalido());
-		assertEquals("Não foi possível autenticar usuário", caixaEletronico.logar());
+		caixaEletronico.logar();
 	}
 }

@@ -4,7 +4,7 @@ public class MockHardwareLoginInvalido implements Hardware {
 
 	@Override
 	public String pegarNumeroDaContaCartao() {
-		return null;
+		throw new ContaNaoEncontradaException("999", "Não foi possível autenticar o usuário");
 	}
 
 }
