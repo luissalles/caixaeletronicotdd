@@ -19,8 +19,8 @@ public class TesteLogin {
 	}
 	
 	@Test
-	public void realizarSaque100Reais() {
-		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginInvalido());
+	public void consultarSaldoDe100Reais() {
+		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginComSucesso());
 		assertEquals("O saldo é R$100,00", caixaEletronico.saldo());
 	}
 }
