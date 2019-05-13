@@ -11,4 +11,10 @@ public class TesteLogin {
 		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginComSucesso());
 		assertEquals("Usuário Autenticado", caixaEletronico.logar());
 	}
+
+	@Test
+	public void loginInválido() {
+		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginComSucesso());
+		assertEquals("Não foi possível autenticar usuário", caixaEletronico.logar());
+	}
 }
