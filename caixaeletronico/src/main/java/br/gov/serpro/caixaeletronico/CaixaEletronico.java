@@ -8,7 +8,7 @@ public class CaixaEletronico {
 	}
 
 	public String logar() {
-		if(hardware != null) {
+		if(hardware.pegarNumeroDaContaCartao() != null) {
 			return "Usuário Autenticado";
 		}else {
 			return "Não foi possível autenticar usuário";
