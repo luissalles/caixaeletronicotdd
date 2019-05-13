@@ -3,7 +3,7 @@ package br.gov.serpro.caixaeletronico;
 public class CaixaEletronico {
 	Hardware hardware;
 
-	public CaixaEletronico(Hardware hardware) {
+	public CaixaEletronico(Hardware hardware, ServicoRemoto servicoRemoto) {
 		this.hardware = hardware;
 	}
 
@@ -16,7 +16,8 @@ public class CaixaEletronico {
 	}
 
 	public String saldo() {
-		return null;
+		ContaCorrente contaCorrente = new ContaCorrente(11, 100);
+		return "O saldo é R$" + contaCorrente.retornaSaldo();
 	}
 
 }
