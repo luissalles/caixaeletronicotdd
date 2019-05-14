@@ -21,6 +21,8 @@ public class MockServicoRemoto implements ServicoRemoto {
 	public int persistirConta(String operacao, int valor) {
 		if(operacao.equals("SAQUE")) {
 			contaCorrente.saldo -= valor;
+		}else {
+			contaCorrente.saldo += valor;
 		}
 		return this.recuperarSaldo();
 	}

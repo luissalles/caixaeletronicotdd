@@ -31,6 +31,7 @@ public class CaixaEletronico {
 	}
 
 	public String depositar(int valor) {
+		servicoRemoto.persistirConta("DEPOSITO", 50);
 		return "Depósito recebido com sucesso";
 	}
 }
