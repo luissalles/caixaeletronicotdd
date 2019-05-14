@@ -18,9 +18,11 @@ public class MockServicoRemoto implements ServicoRemoto {
 	}
 
 	@Override
-	public void persistirConta() {
-		// TODO Auto-generated method stub
-		
+	public int persistirConta(String operacao, int valor) {
+		if(operacao.equals("SAQUE")) {
+			contaCorrente.saldo -= valor;
+		}
+		return this.recuperarSaldo();
 	}
 
 }

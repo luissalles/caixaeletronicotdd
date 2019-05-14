@@ -3,5 +3,5 @@ package br.gov.serpro.caixaeletronico;
 public interface ServicoRemoto {
 	int recuperarConta();
 	int recuperarSaldo();
-	void persistirConta();
+	int persistirConta(String operacao, int valor);
 }

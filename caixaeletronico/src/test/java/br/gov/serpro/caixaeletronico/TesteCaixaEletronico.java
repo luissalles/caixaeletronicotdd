@@ -34,12 +34,13 @@ public class TesteCaixaEletronico {
 	@Test
 	public void saqueComSucesso() {
 		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginComSucesso(),  new MockServicoRemoto(contaCorrente));
-		assertEquals("Retire seu dinheiro", caixaEletronico.sacar());
+		assertEquals("Retire seu dinheiro", caixaEletronico.sacar(50));
+		assertEquals("O saldo é R$50", caixaEletronico.saldo());
 	}
 
 	@Test
 	public void saqueComSaldoInsuficente() {
 		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginComSucesso(),  new MockServicoRemoto(contaCorrente));
-		assertEquals("Saldo Insuficiente", caixaEletronico.sacar());
+		assertEquals("Saldo Insuficiente", caixaEletronico.sacar(120));
 	}
 }

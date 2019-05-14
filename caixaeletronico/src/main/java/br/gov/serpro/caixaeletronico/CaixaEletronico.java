@@ -21,8 +21,13 @@ public class CaixaEletronico {
 		return "O saldo é R$" + servicoRemoto.recuperarSaldo();
 	}
 
-	public String sacar() {
-		return "Retire seu dinheiro";
+	public String sacar(int valor) {
+		if((servicoRemoto.recuperarSaldo() - valor) < 0) {
+			return "Saldo Insuficiente";
+		}else {
+			servicoRemoto.persistirConta("SAQUE", 50);
+			return "Retire seu dinheiro";
+		}
 	}
 
 }
