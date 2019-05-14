@@ -2,9 +2,11 @@ package br.gov.serpro.caixaeletronico;
 
 public class CaixaEletronico {
 	Hardware hardware;
+	ServicoRemoto servicoRemoto;
 
 	public CaixaEletronico(Hardware hardware, ServicoRemoto servicoRemoto) {
 		this.hardware = hardware;
+		this.servicoRemoto = servicoRemoto;	
 	}
 
 	public String logar() {
@@ -16,8 +18,11 @@ public class CaixaEletronico {
 	}
 
 	public String saldo() {
-		ContaCorrente contaCorrente = new ContaCorrente(11, 100);
-		return "O saldo é R$" + contaCorrente.retornaSaldo();
+		return "O saldo é R$" + servicoRemoto.recuperarSaldo();
+	}
+
+	public String sacar() {
+		return null;
 	}
 
 }
