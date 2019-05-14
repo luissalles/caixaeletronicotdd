@@ -22,7 +22,7 @@ public class CaixaEletronico {
 	}
 
 	public String sacar() {
-		return null;
+		return "Retire seu dinheiro";
 	}
 
 }
