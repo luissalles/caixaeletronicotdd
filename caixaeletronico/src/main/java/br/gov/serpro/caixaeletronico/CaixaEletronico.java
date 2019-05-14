@@ -30,4 +30,7 @@ public class CaixaEletronico {
 		}
 	}
 
+	public String depositar(int valor) {
+		return "Depósito recebido com sucesso";
+	}
 }

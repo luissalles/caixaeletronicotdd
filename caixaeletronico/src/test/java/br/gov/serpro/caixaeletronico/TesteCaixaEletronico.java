@@ -43,4 +43,11 @@ public class TesteCaixaEletronico {
 		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginComSucesso(),  new MockServicoRemoto(contaCorrente));
 		assertEquals("Saldo Insuficiente", caixaEletronico.sacar(120));
 	}
+
+	@Test
+	public void depositoComSucesso() {
+		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginComSucesso(),  new MockServicoRemoto(contaCorrente));
+		assertEquals("Depósito recebido com sucesso", caixaEletronico.depositar(50));
+		assertEquals("O saldo é R$150", caixaEletronico.saldo());
+	}
 }
