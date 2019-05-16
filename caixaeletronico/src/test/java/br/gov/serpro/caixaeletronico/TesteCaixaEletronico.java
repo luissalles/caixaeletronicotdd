@@ -65,7 +65,7 @@ public class TesteCaixaEletronico {
 
 	@Test(expected=FalhaDeHardwareException.class)
 	public void depositoComFalhaNoHardware() {
-		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginComSucesso(),  new MockServicoRemoto(contaCorrente));
+		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareFalha(),  new MockServicoRemoto(contaCorrente));
 		caixaEletronico.depositar(50);
 	}
 }
