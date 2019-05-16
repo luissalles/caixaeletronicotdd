@@ -4,8 +4,7 @@ public class MockHardwareFalha implements Hardware {
 
 	@Override
 	public String pegarNumeroDaContaCartao() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new FalhaHardwareException();
 	}
 
 	@Override
