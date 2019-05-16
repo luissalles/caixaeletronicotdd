@@ -9,8 +9,7 @@ public class MockHardwareFalha implements Hardware {
 
 	@Override
 	public void entregarDinheiro() {
-		
-
+		throw new FalhaDeHardwareException();
 	}
 
 	@Override
