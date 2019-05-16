@@ -26,12 +26,14 @@ public class CaixaEletronico {
 			return "Saldo Insuficiente";
 		}else {
 			servicoRemoto.persistirConta("SAQUE", 50);
+			hardware.entregarDinheiro();
 			return "Retire seu dinheiro";
 		}
 	}
 
 	public String depositar(int valor) {
 		servicoRemoto.persistirConta("DEPOSITO", 50);
+		hardware.lerEnvelope();
 		return "Depósito recebido com sucesso";
 	}
 }

@@ -25,6 +25,12 @@ public class TesteCaixaEletronico {
 		caixaEletronico.logar();
 	}
 	
+	@Test(expected=FalhaHardwareException.class)
+	public void hardwareFalhaAoPegarNumeroCartao() {
+		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareFalha(),  new MockServicoRemoto(contaCorrente));
+		caixaEletronico.logar();
+	}
+	
 	@Test
 	public void consultarSaldoDe100Reais() {
 		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginComSucesso(),  new MockServicoRemoto(contaCorrente));
