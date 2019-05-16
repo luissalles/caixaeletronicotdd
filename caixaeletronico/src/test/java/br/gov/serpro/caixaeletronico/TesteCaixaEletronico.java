@@ -62,4 +62,10 @@ public class TesteCaixaEletronico {
 		assertEquals("Depósito recebido com sucesso", caixaEletronico.depositar(50));
 		assertEquals("O saldo é R$150", caixaEletronico.saldo());
 	}
+
+	@Test(expected=FalhaDeHardwareException.class)
+	public void depositoComFalhaNoHardware() {
+		CaixaEletronico caixaEletronico = new CaixaEletronico(new MockHardwareLoginComSucesso(),  new MockServicoRemoto(contaCorrente));
+		caixaEletronico.depositar(50);
+	}
 }
