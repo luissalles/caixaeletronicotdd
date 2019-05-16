@@ -4,7 +4,7 @@ public class MockHardwareFalha implements Hardware {
 
 	@Override
 	public String pegarNumeroDaContaCartao() {
-		throw new FalhaHardwareException();
+		throw new FalhaDeHardwareException();
 	}
 
 	@Override
