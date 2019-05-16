@@ -14,8 +14,7 @@ public class MockHardwareFalha implements Hardware {
 
 	@Override
 	public void lerEnvelope() {
-		// TODO Auto-generated method stub
-
+		throw new FalhaDeHardwareException();
 	}
 
 }
