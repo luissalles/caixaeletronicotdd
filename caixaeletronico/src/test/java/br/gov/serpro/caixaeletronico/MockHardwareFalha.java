@@ -9,7 +9,7 @@ public class MockHardwareFalha implements Hardware {
 
 	@Override
 	public void entregarDinheiro() {
-		// TODO Auto-generated method stub
+		
 
 	}
 
