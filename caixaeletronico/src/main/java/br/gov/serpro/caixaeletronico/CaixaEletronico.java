@@ -18,11 +18,13 @@ public class CaixaEletronico {
 	}
 
 	public String saldo() {
-		return "O saldo é R$" + servicoRemoto.recuperarSaldo();
+		ContaCorrente contaCorrente = servicoRemoto.recuperarConta();
+		return "O saldo é R$" + contaCorrente.retornaSaldo();
 	}
 
 	public String sacar(int valor) {
-		if((servicoRemoto.recuperarSaldo() - valor) < 0) {
+		ContaCorrente contaCorrente = servicoRemoto.recuperarConta();
+		if((contaCorrente.retornaSaldo() - valor) < 0) {
 			return "Saldo Insuficiente";
 		}else {
 			servicoRemoto.persistirConta("SAQUE", 50);

@@ -1,6 +1,7 @@
 package br.gov.serpro.caixaeletronico;
 
 public class MockHardwareLoginInvalido implements Hardware {
+	boolean passouPeloHardware = false;
 
 	@Override
 	public String pegarNumeroDaContaCartao() {
@@ -9,14 +10,12 @@ public class MockHardwareLoginInvalido implements Hardware {
 
 	@Override
 	public void entregarDinheiro() {
-		// TODO Auto-generated method stub
-		
+		passouPeloHardware = true;
 	}
 
 	@Override
 	public void lerEnvelope() {
-		// TODO Auto-generated method stub
-		
+		passouPeloHardware = true;
 	}
 
 }

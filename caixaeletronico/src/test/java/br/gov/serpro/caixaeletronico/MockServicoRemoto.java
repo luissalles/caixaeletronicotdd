@@ -8,13 +8,8 @@ public class MockServicoRemoto implements ServicoRemoto {
 	}
 	
 	@Override
-	public int recuperarConta() {
-		return contaCorrente.numero;
-	}
-
-	@Override
-	public int recuperarSaldo() {
-		return contaCorrente.saldo;
+	public ContaCorrente recuperarConta() {
+		return contaCorrente;
 	}
 
 	@Override
@@ -24,7 +19,7 @@ public class MockServicoRemoto implements ServicoRemoto {
 		}else {
 			contaCorrente.saldo += valor;
 		}
-		return this.recuperarSaldo();
+		return contaCorrente.saldo;
 	}
 
 }
